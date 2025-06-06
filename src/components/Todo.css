@@ -1,0 +1,128 @@
+/* Todo.css */
+
+:root {
+  --primary-color: #4f46e5; /* Indigo */
+  --secondary-color: #f3f4f6; /* Light gray background */
+  --text-color: #111827;
+  --button-hover: #4338ca;
+  --completed-color: #10b981; /* Green */
+  --delete-color: #ef4444;    /* Red */
+  --card-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container */
+.todo {
+  max-width: 500px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+}
+
+/* Header */
+.todo-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.todo-header h1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.todo-header p {
+  font-size: 1rem;
+  color: #6b7280; /* gray-500 */
+}
+
+/* Form */
+.form form {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form button {
+  padding: 0.8rem 1.2rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.form button:hover {
+  background-color: var(--button-hover);
+}
+
+/* Todo list */
+.myUnorderedList ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.todo-item {
+  background-color: #f9fafb;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s ease;
+}
+
+.todo-item:hover {
+  transform: scale(1.02);
+}
+
+.todo-item span {
+  flex-grow: 1;
+  font-size: 1rem;
+  padding-right: 1rem;
+}
+
+/* Buttons */
+.checkButton,
+.deleteButton {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.checkButton {
+  color: var(--completed-color);
+}
+
+.deleteButton {
+  color: var(--delete-color);
+}
+
+.checkButton:hover,
+.deleteButton:hover {
+  transform: scale(1.3);
+}
